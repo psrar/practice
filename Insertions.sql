@@ -1,44 +1,39 @@
 use equipment;
-insert into employee (fio, position) values ('Малыхина Ольга Юрьевна', 'Заведующая учебно-вычислительным центромб преподаватель');
-insert into employee (fio, position) values ('Осипова Надежда Михайловна', 'Преподаватель');
-insert into employee (fio, position) values ('Митрошенкова Елена Алексеевна', 'Преподаватель');
-insert into employee (fio, position) values ('Петренко Людмила Борисовна', 'Преподаватель');
-insert into employee (fio, position) values ('Тамахина Ирина Андрониковна', 'Преподаватель');
-insert into employee (fio, position) values ('Жилкина Надежда Александровна', 'Преподаватель');
+insert into employee (fio, position) values ('Малыхина Ольга Юрьевна', 'Заведующая учебно-вычислительным центромб преподаватель'),
+('Осипова Надежда Михайловна', 'Преподаватель'), ('Митрошенкова Елена Алексеевна', 'Преподаватель'),
+('Петренко Людмила Борисовна', 'Преподаватель'), ('Тамахина Ирина Андрониковна', 'Преподаватель'),
+('Жилкина Надежда Александровна', 'Преподаватель');
 select * from employee;
 
-insert into room values (122, 6);
-insert into room values (123, 6);
-insert into room values (124, 6);
-insert into room values (210, 6);
+insert into room values (122, 6), (123, 6),
+(124, 6), (210, 6);
 select * from room;
 
-insert into equipment_type (type_name) values ('Системный блок');
-insert into equipment_type (type_name) values ('Монитор');
-insert into equipment_type (type_name) values ('Компьютерная мышь');
-insert into equipment_type (type_name) values ('Клавиатура');
-insert into equipment_type (type_name) values ('Смарт-доска');
-insert into equipment_type (type_name) values ('Ноутбук');
-insert into equipment_type (type_name) values ('Принтер');
-insert into equipment_type (type_name) values ('Сканер');
-insert into equipment_type (type_name) values ('Проектор');
-insert into equipment_type (type_name) values ('МФУ'); #Многофункциональное устройство
-insert into equipment_type (type_name) values ('ИБП'); #Источник бесперебойного питания
+# ' YYYY-MM-DD hh:mm:ss '
+insert into exploitation (room, responsible, dt_start, dt_end) values
+(122, 6,  '2021-10-4 9:00:00',  '2021-10-4 10:30:00'), (122, 7,  '2021-10-4 10:50:00',  '2021-10-4 12:10:00'),
+(122, 8,  '2021-10-4 12:40:00',  '2021-10-4 14:00:00'), (122, 8,  '2021-10-4 14:30:00',  '2021-10-4 16:00:00'),
+(122, 9,  '2021-10-5 9:00:00',  '2021-10-5 10:30:00'), (122, 10,  '2021-10-5 10:50:00',  '2021-10-5 12:10:00'),
+(122, 9,  '2021-10-5 12:40:00',  '2021-10-5 14:00:00'), (122, 8,  '2021-10-5 14:30:00',  '2021-10-5 16:00:00'),
+(123, 7,  '2021-10-4 9:00:00',  '2021-10-4 10:30:00'), (123, 6,  '2021-10-4 10:50:00',  '2021-10-4 12:10:00'),
+(123, 7,  '2021-10-4 12:40:00',  '2021-10-4 14:00:00'), (123, 10,  '2021-10-4 14:30:00',  '2021-10-4 16:00:00'),
+(123, 6,  '2021-10-5 9:00:00',  '2021-10-4 10:30:00'), (123, 8,  '2021-10-5 10:50:00',  '2021-10-5 12:10:00'),
+(123, 11,  '2021-10-5 12:40:00',  '2021-10-4 14:00:00'), (123, 11,  '2021-10-5 14:30:00',  '2021-10-5 16:00:00');
+select * from exploitation;
+
+insert into equipment_type (type_name) values ('Системный блок'),
+('Монитор'), ('Компьютерная мышь'), ('Клавиатура'), ('Смарт-доска'),
+('Ноутбук'), ('Принтер'), ('Сканер'), ('Проектор'), ('МФУ'), #Многофункциональное устройство
+('ИБП'); #Источник бесперебойного питания
 select * from equipment_type;
 
-insert into warehouse (descr) values('Склад в подвале');
-insert into warehouse (descr) values('Склад на пятом этаже');
-insert into warehouse (descr) values('Склад на первом этаже');
+insert into warehouse (descr) values('Склад в подвале'),
+('Склад на пятом этаже'), ('Склад на первом этаже');
 select * from warehouse;
 
-insert into detail_type (type_name) values ('Картридж для принтера');
-insert into detail_type (type_name) values ('Видеокарта');
-insert into detail_type (type_name) values ('Материнская плата');
-insert into detail_type (type_name) values ('Процессор');
-insert into detail_type (type_name) values ('Кулер');
-insert into detail_type (type_name) values ('HDD');
-insert into detail_type (type_name) values ('SSD');
-insert into detail_type (type_name) values ('Блок питания');
+insert into detail_type (type_name) values ('Картридж для принтера'),
+('Видеокарта'), ('Материнская плата'), ('Процессор'), ('Кулер'),
+('HDD'), ('SSD'), ('Блок питания');
 select * from detail_type;
 
 #Системные блоки
