@@ -59,7 +59,7 @@ insert into equipment values (41, 122, NULL, 3),
 (42, 122, NULL, 3), (43, 122, NULL, 3), (44, 122, NULL, 3),
 (45, 122, NULL, 3), (46, 122, NULL, 3), (47, 122, NULL, 3),
 (48, 122, NULL, 3), (49, 122, NULL, 3), (50, 122, NULL, 3);
-insert into equipment values (51, 123, NULL, 2),
+insert into equipment values (51, 123, NULL, 3),
 (52, 123, NULL, 3), (53, 123, NULL, 3), (54, 123, NULL, 3),
 (55, 123, NULL, 3), (56, 123, NULL, 3), (57, 123, NULL, 3),
 (58, 123, NULL, 3), (59, 123, NULL, 3), (60, 123, NULL, 3);
